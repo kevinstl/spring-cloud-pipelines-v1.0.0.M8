@@ -20,10 +20,12 @@ fi
 
 POTENTIAL_DOCKER_HOST="$( echo "$DOCKER_HOST" | cut -d ":" -f 2 | cut -d "/" -f 3 )"
 if [[ -z "${POTENTIAL_DOCKER_HOST}" ]]; then
-    POTENTIAL_DOCKER_HOST="localhost"
+#    POTENTIAL_DOCKER_HOST="localhost"
+    POTENTIAL_DOCKER_HOST="minikube"
 fi
 
-ARTIFACTORY_URL="${ARTIFACTORY_URL:-http://admin:password@${POTENTIAL_DOCKER_HOST}:8081/artifactory/libs-release-local}"
+#ARTIFACTORY_URL="${ARTIFACTORY_URL:-http://admin:password@${POTENTIAL_DOCKER_HOST}:8081/artifactory/libs-release-local}"
+ARTIFACTORY_URL="${ARTIFACTORY_URL:-http://admin:password@${POTENTIAL_DOCKER_HOST}:30011/artifactory/libs-release-local}"
 ARTIFACTORY_ID="${ARTIFACTORY_ID:-artifactory-local}"
 
 function deploy_project {
