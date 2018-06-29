@@ -1,0 +1,154 @@
+# job parameters
+app-url: git@github.com:marcingrzejszczak/factory.git
+app-branch: sc-pipelines
+tools-scripts-url: https://github.com/spring-cloud/spring-cloud-pipelines.git
+tools-branch: master
+maven-local-dir: m2/rootfs
+
+app-memory-limit: 256m
+build-options:
+
+# MULTI-MODULE-SUPPORT
+project-name: app-monolith
+project-type: maven
+
+# credentials
+paas-hostname-uuid: ddd-by-examples
+paas-api: https://api.run.pivotal.io
+paas-test-api-url: https://api.run.pivotal.io
+paas-stage-api-url: https://api.run.pivotal.io
+paas-prod-api-url: https://api.run.pivotal.io
+paas-test-username: "buildmaster@springframework.org"
+paas-test-password: "6ubS&4zngN1d"
+paas-test-org: FrameworksAndRuntimes
+paas-test-space-prefix: sc-pipelines-test
+paas-stage-username: "buildmaster@springframework.org"
+paas-stage-password: "6ubS&4zngN1d"
+paas-stage-org: FrameworksAndRuntimes
+paas-stage-space: sc-pipelines-stage
+paas-prod-username: "buildmaster@springframework.org"
+paas-prod-password: "6ubS&4zngN1d"
+paas-prod-org: FrameworksAndRuntimes
+paas-prod-space: sc-pipelines-prod
+paas-type: cf
+pipeline-descriptor: sc-pipelines.yml
+
+#paas-hostname-uuid: sc-pipelines
+#paas-api: https://api.local.pcfdev.io
+#paas-test-api-url: https://api.local.pcfdev.io
+#paas-stage-api-url: https://api.local.pcfdev.io
+#paas-prod-api-url: https://api.local.pcfdev.io
+#paas-test-username: user
+#paas-test-password: pass
+#paas-test-org: pcfdev-org
+#paas-test-space: pcfdev-test
+#paas-stage-username: user
+#paas-stage-password: pass
+#paas-stage-org: pcfdev-org
+#paas-stage-space: pcfdev-stage
+#paas-prod-username: user
+#paas-prod-password: pass
+#paas-prod-org: pcfdev-org
+#paas-prod-space: pcfdev-prod
+#paas-type: cf
+
+github-private-key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIJKAIBAAKCAgEApWmaPNW+0LBD9b6cjM4rBOhTntq86p4GHbJKX34h144CM77s
+  GZ8MC8CVQq7jt4vmtPHo9n4c4UPgKpnBpUaYZFZBdWZCemUpjIdBlaBL2MuMeIRT
+  AalhZG4+q6wHRK9mORp/XU/ibtr6cvZB1q70lLXPPz59VIpmsRRoX/3raFOFdp9u
+  JQLpEg0Y6tfuWyFI3ZG3Nz7j9wwvk+Qa90qecPG6gzTQDiu7ASxKEBAg/iyDA8Bf
+  MAIp1k0CNOeN4814FzlzNITjyZsQb/m4mxNkoNfwe1bPpjcUDd5RyJKAI4HScn1E
+  Ti8EoNfR1pvLfZkAaQ1W2YTH4SIzVUBiBktJrTVyr9tiGYNv6X9bApw7zsj1EhuO
+  wHAUkS8S62PlRRApS/PWYlXaBFIKLWbaMh52SW++Rx3o+sG8Ybjl/ZR62Zn8TVnf
+  87YNv8T9IrYTXb7EcdT24onnbK0yh3TiDgY3DoOp90j10PrdPaondjJ4S79l4A7g
+  S0+A7gOZjJbyi0CRvRIg99HZ4pC69bXQdEr1HJwlbqK1/CGjChfK6r05gKrW/Q/L
+  t3vxHKcjem8PmGKZlDnsKLvLU4k5gjPdJCJRoWq+uamGyWGjoMEC8lcJjcRe+bTc
+  TgsWHcecBMgoggORu7r9Hd/PAvot+fC1IaYQny2fGNFKD3TaF3A2dg5XI5ECAwEA
+  AQKCAgA/OkWNuXpt1OK1Xb4DiI8jGhdUonISEINv+IW7SMBw38RxuSoQhR4ao+uq
+  CKXctCpkwg91oTEy3joirpE5tulreRkeYg9JL8AZCl6EbjhvzyaLrrD38qHavNVR
+  07kXhSBC9aD3ryBzlVqkdQMnp8qvyWtF1oIbvaeRSqa3Ap1oTHy4oip9FUa38q+y
+  nQVsaiWrJBbvlCeZeFv7YPb5zdkQfSX5H0fkEs0xnpdU2oVyAtu1pGP+OuV5GAie
+  5l/zUsfzwK8LxTw5BP/cfY0WIeyWGtS+oKlQ9L7CqleCnpVCfU5PGxjv9cMEJFr+
+  eKDpCoIApeury7iHkwYiMTEHDOJFKL6oynN3hzIFdxUC9tgAlPSmmeKPLMARj7A9
+  kJ+/xQZFh1fW5iGveDuHH+0y/BKhUkQK8CzW7xh2hFpYAaOOV+XUa8XxxP0RY3GU
+  rGkYqd0wX32myIiqfvOYD6srXGYdnrJFjAY+t2vytdfIzD+vL3LzI4AZb9prfejJ
+  JfxEk57yfuSicK9bsGvGKW/6da+oj/EOumDPhSD9PT9tiGGx6iEfp1whXu7gbEie
+  my1KaUeZyw826+Mjm3G7s3kdhr9CPBz4ObEhrhuce171H0xH4MxYkAe4wmPgnJCA
+  FMY8QacLRT3ZgBBXDVa2hZVbcWzJMFvcuZx6/1tvxpRW2rFaAQKCAQEA1P0U58L+
+  9soKd3Qb0ntuCGo535b3qogL3NWwPQQ+qZaBDxXXyV8eKbqv9pIg05aP6cX/lzjG
+  P74uOuprR00xo5uOl6MvWDpUMLgqeKq76FIT/EuO3/2oQ2u+T+x1madD8V4kAtoB
+  TuB7mvw6jdOwp/Tot+jbJjgwm0PbBrDS9xW+ye7dSKNeeDJu242bdR68ppKhRFxf
+  /rBYKx1qNH1QW1FYa34lnUfXBoCyDwpb9ewtnN7NB3Q7xYssHGB27Cm7NqSeoTB5
+  tMk3RE+Nbbb/Uh4vmnhj6idaMBrCxx86m2jYv16ghrCahoSICECG++yf0mihdZ2S
+  WEa94LxeUJBoIQKCAQEAxtD4IPYUQgMIULAoM85iUOqKlWodk8d2MG0Qd8VGppsv
+  4hdkLRap2EjK9NntKjzmHuqK8yq4rtc9TexnEH3DpDbSq3HmruAo36Ax4t6PeWm/
+  2e+o1AgrPgHH3+Aih7WHyo3BvBnh5/zG8jaEwsY7jSTjh8fwrYV9PPY5xuTvN1Rs
+  bPkeRd7sfziJFqJq5q1nWg/wanGqtatfLXh3iHJXkwzAtXkwGjyBgpS2SgziWNoh
+  GzUhoMJ7GUsobjLKyYSrPDbBsz+z4bv7zhy9B0/DyhrXkW4oA8K9ajkDFPh31ipz
+  crjbkdD3UZ/R51phrLQKVyUfnJLSe+0SmTbwMV+NcQKCAQEAiewlSHuObbOiGX6X
+  sbJ6K3rWZUK2uLiGrge2q5x/E4TBqEolxWIR/0XEQvCXz0y1ftXX0E5UmtyFxWMd
+  +zsyxNar/OgQdZq4ACCSaDdvnV7hUESBje0NtDMmN01RTiHxrnCe8zXHGRPnFxL0
+  u/j0cZ73wHhKybIjT7geMnP4+UYcmVlT9IDOYRmPjh9iJvKziU50nfcPtrbtMWZH
+  6xunGKtRjbJPm0z1ImHebDzyFgtN8kKZFJWhSyf3dZzGBeJ0OEtb6dehSH/wiQzW
+  8dBKABxKCUaitPOsxG/f5+ACLLc1fJ9DZlUgi7FxAZ7/ik3NpQxaWfai2QVeWhTB
+  InyQ4QKCAQBXbgXv2MdH0DWT5iOHxLaPhtSyqBuhpRFgclXPlb1f/tarwkWXXmQK
+  bNhznHIjJOy9o76++IaGvLiEz/Ty15t1V3aFVm1vcbwHu1a0wdKuPcbUfAPuWjlJ
+  51aSKOqGa1nvxS7xHSCu+AY09aykSrBdfV9hkpdQd2d/q3f08zAPUNztfw/FAidW
+  OvJuNbZ1AsR0YpYC+UFs6pPMVzGZm07Pp8gHBegVYY5CcktHfSr8j9AHOvIy09N2
+  aAq7izKKNAFpVVsRDG56UkSFezXVRUqAUhWCKsMGBFlvoOquCiYI1Fo4lPpZwV9B
+  UdrotmJFpFb3w6eHHznYrYSERBiUXcTBAoIBADYGRVxwhixh7XiNSElCOgqDxtJH
+  YwT9recqAYzr1mijwAXGL37RkmQaZCOCuCUinc2sAglchDjcPGd3ZpHArdmPgasM
+  QgiCxnUfp5QvHJFS0xKb3I4g096n5aSUhf+1KY7krM689dHFFhYmNa+MaHXGabTI
+  Qjxma8UEFYAhrZR4LMUPa8lV783ecdvjae6D0O8DvHWL0oG2W5RJ7Neu2vOSpWpI
+  vzfCEjHEWFdRT+1twsV9/asC6EkBluZ+RecyRfngj/VabCA59Fz+SCIey9nezNiW
+  /6Ljd7DiW1fF0nqSKUw+dGKb3uXknqk757R9o4jgymIFs0D0BtulkkYvrK8=
+  -----END RSA PRIVATE KEY-----
+git-email: mgrzejszczak@pivotal.io
+git-name: Marcin Grzejszczak
+
+#m2-settings-repo-id: artifactory-local
+#m2-settings-repo-username: admin
+#m2-settings-repo-password: password
+#repo-with-binaries: http://192.168.11.1:8081/artifactory/libs-release-local/
+
+m2-settings-repo-id: repo.spring.io
+m2-settings-repo-username: mgrzejszczak
+m2-settings-repo-password: AP3zRLVKH6fJrpuJAYFzciBpkDd
+repo-with-binaries: http://repo.spring.io/libs-milestone-local
+repo-with-binaries-for-upload: http://repo.spring.io/libs-milestone-local
+
+
+# remove::start[K8S]
+kubernetes-minikube:
+mysql-root-password:
+mysql-user:
+mysql-password:
+docker-username:
+docker-password:
+docker-server-id:
+docker-email:
+docker-registry-organization:
+docker-registry-url:
+paas-test-ca:
+paas-test-ca-path:
+paas-test-namespace:
+paas-test-system-name:
+paas-test-cluster-username:
+paas-test-cluster-name:
+paas-stage-ca:
+paas-stage-ca-path:
+paas-stage-cluster-name:
+paas-stage-cluster-username:
+paas-stage-system-name:
+paas-stage-namespace:
+paas-prod-ca:
+paas-prod-ca-path:
+paas-prod-system-name:
+paas-prod-cluster-name:
+paas-prod-cluster-username:
+paas-prod-namespace:
+paas-test-client-token:
+paas-stage-client-token:
+paas-prod-client-token:
+# remove::end[K8S]
