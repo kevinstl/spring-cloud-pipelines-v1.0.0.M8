@@ -181,7 +181,7 @@ function deployServices() {
 	parsePipelineDescriptor
 
 #	if [[ -z "${PARSED_YAML}" ]]; then
-	if [[ ( -z "${PARSED_YAML}" ) || ( "${PARSED_YAML}" = *"Services"* ) ]]; then
+	if [[ ( -z "${PARSED_YAML}" ) || ( "${PARSED_YAML}" != *"Services"* ) ]]; then
 		return
 	fi
 
